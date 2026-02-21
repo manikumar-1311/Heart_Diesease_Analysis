@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Analysis</title>
+   <style>body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url('{{ url_for("static", filename="healthcare-background-8u6l9oyzn67dtdas.jpg") }}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: #3f51b5;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px;
+    background: rgba(245, 245, 245, 0.95);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.btn {
+    background: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Welcome</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

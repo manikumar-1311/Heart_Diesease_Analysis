@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+.about-container {
+    background: url("{{ url_for('static', filename='healthcare-background-8u6l9oyzn67dtdas.jpg') }}")
+                no-repeat center center/cover;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+
+/* Title Style */
+.about-container h2 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    text-align: center;
+    color: rgb(235, 12, 12);
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+/* Paragraph Style */
+.about-container p {
+    line-height: 1.8;
+    margin: 20px 60px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: justify;
+    background: rgba(255,255,255,0.75); /* light white box for readability */
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+</style>
+
+<div class="about-container">
+
+<h2>About Heart Disease</h2>
+
+<p>
+Heart disease is a general term used to describe a group of disorders that affect the heart and blood vessels, also known as the cardiovascular system. It includes conditions such as coronary artery disease, heart failure, arrhythmias (irregular heartbeat), and heart valve diseases. These conditions can interfere with the normal functioning of the heart, reducing its ability to pump blood and deliver oxygen and nutrients to different parts of the body.
+</p>
+
+<p>
+One of the main causes of heart disease is the buildup of fatty deposits, known as plaque, inside the arteries. This process, called atherosclerosis, narrows the blood vessels and restricts blood flow. When blood flow to the heart is blocked, it can lead to chest pain, heart attacks, or other serious complications. High blood pressure and high cholesterol levels also increase the risk of developing these problems.
+</p>
+
+<p>
+Lifestyle factors play a significant role in the development of heart disease. Obesity puts extra pressure on the heart and often leads to other conditions such as diabetes and hypertension. Smoking is particularly harmful because it damages the blood vessels, increases heart rate, and reduces oxygen supply in the blood. A sedentary lifestyle weakens the heart muscles and contributes to weight gain and poor circulation.
+</p>
+
+<p>
+Diet and daily habits also strongly influence heart health. Consuming foods high in saturated fats, salt, and sugar can raise cholesterol and blood pressure levels. Excessive alcohol consumption and unmanaged stress further increase the risk. On the other hand, a balanced diet rich in fruits, vegetables, whole grains, and lean proteins helps maintain healthy blood vessels and supports proper heart function.
+</p>
+
+<p>
+Although heart disease is a serious condition, it is often preventable. Regular exercise, maintaining a healthy body weight, quitting smoking, and attending routine medical check-ups can significantly lower the risk. Early detection and proper management of conditions such as high blood pressure, diabetes, and high cholesterol are essential. By adopting healthy lifestyle choices and being aware of risk factors, individuals can greatly improve their cardiovascular health and overall quality of life.
+</p>
+
+</div>
+
+{% endblock %}

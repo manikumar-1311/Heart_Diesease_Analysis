@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .dashboard-container {
+        padding: 30px 50px;
+        background: #f4f6f9;
+    }
+
+    .dash-title {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #222;
+    }
+
+    .tableauPlaceholder {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        width: 100%;
+        overflow: hidden;
+    }
+</style>
+
+<div class="dashboard-container">
+
+    <h2 class="dash-title">Heart Disease Dashboard</h2>
+
+    <div class="tableauPlaceholder" id="viz1771324569124">
+
+        <noscript>
+            <a href="#">
+                <img 
+                    alt="Heart Disease Analysis"
+                    src="https://public.tableau.com/static/images/Bo/Book1_17712356653070/Dashboard1/1_rss.png"
+                    style="border: none; width:100%;"
+                />
+            </a>
+        </noscript>
+
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="Book1_17712356653070/Dashboard1" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+        </object>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var divElement = document.getElementById("viz1771324569124");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+
+    // FULL WIDTH
+    vizElement.style.width = "100%";
+
+    // INCREASE HEIGHT FOR CLEAR GRAPHS
+    if (window.innerWidth > 1200) {
+        vizElement.style.height = "900px";
+    } 
+    else if (window.innerWidth > 768) {
+        vizElement.style.height = "750px";
+    } 
+    else {
+        vizElement.style.height = "650px";
+    }
+
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+{% endblock %}

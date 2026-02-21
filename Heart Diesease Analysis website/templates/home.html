@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .hero {
+        background-image: url("https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 450px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        position: relative;
+        margin: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    /* Overlay for readability */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .hero .btn {
+        background: #e53935;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .hero .btn:hover {
+        background: #c62828;
+        transform: scale(1.08);
+        box-shadow: 0 0 12px rgba(229,57,53,0.6);
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            min-height: 300px;
+        }
+
+        .hero h1 {
+            font-size: 26px;
+        }
+    }
+</style>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Heart Disease Analysis</h1>
+        <a href="/dashboard" class="btn">Get Started</a>
+    </div>
+</section>
+
+{% endblock %}

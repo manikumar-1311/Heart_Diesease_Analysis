@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+.story-container {
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.story-image {
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+</style>
+
+<div class="story-container">
+
+<h2>Heart Disease Story</h2>
+<p>Data-Driven Insights into Heart Disease: Demographics, Lifestyle, and Health Risk Factors.</p>
+
+<img class="story-image"
+     src="{{ url_for('static', filename='images/Screenshot 2026-02-18 111715.png') }}"
+     alt="Heart Disease Dashboard Story">
+
+<img class="story-image"
+     src="{{ url_for('static', filename='images/Screenshot 2026-02-18 113245.png') }}"
+     alt="Heart Disease Dashboard Story">
+
+<img class="story-image"
+     src="{{ url_for('static', filename='images/Screenshot 2026-02-18 113525.png') }}"
+     alt="Heart Disease Dashboard Story">     
+
+</div>
+
+{% endblock %}
